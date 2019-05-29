@@ -40,11 +40,13 @@
       config = {
         pages: [
           'pages/topics/index',
+          'pages/topics/userIndex',
           'pages/topics/show',
           'pages/auth/login',
           'pages/auth/register',
           'pages/users/me',
-          'pages/users/edit'
+          'pages/users/edit',
+          'pages/users/show'
         ],
         window: {
           backgroundTextStyle: 'light',
