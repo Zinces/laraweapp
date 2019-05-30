@@ -102,10 +102,11 @@
                     // 201 为登录正确，返回上一页
             if (authResponse.statusCode === 201) {
                 // 获取用户权限
-                this.getPerms()
+              this.$parent.getPerms()
               wepy.navigateBack()
             }
           } catch (err) {
+            console.log(2 + err)
             wepy.showModal({
               title: '提示',
               content: '服务器错误，请联系管理员'
@@ -122,10 +123,11 @@
                 // 登录成功返回上一页
           if (authResponse.statusCode === 201) {
               // 获取用户权限
-              this.getPerms()
+            this.$parent.getPerms()
             wepy.navigateBack()
           }
         } catch (err) {
+          console.log(1 + err)
           wepy.showModal({
             title: '提示',
             content: '服务器错误，请联系管理员'
