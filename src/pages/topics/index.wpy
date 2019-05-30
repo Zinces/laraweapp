@@ -87,18 +87,11 @@
         enablePullDownRefresh: true
       }
       data = {
-            // 话题数据
         topics: [],
-            // 当前分页
-        page: 1,
-
-        noMoreData: false,
-
         categories: [],
-
         categoryOpen: false,
-
-        currentCategory: {}
+        currentCategory: {},
+        requestData: {}
       }
       mixins = [unreadCount]
       components = {
@@ -119,7 +112,9 @@
           this.currentCategory = id ? this.categories.find(category => category.id === id) : {}
                 // 点击以后关闭下拉列表
           this.categoryOpen = false
+
           this.$apply()
+
           this.requestData.category_id = this.currentCategoryId
 
             // 调用组件的 reload 方法
